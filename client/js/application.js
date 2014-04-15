@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   	var waitingInterval, userNumInterval;
-  	var sockjs_url = 'http://localhost:3000/game/sockets', sockjs, multiplexer;
+  	var sockjs_url = 'http://2048.stolarsky.com:3000/game/sockets', sockjs, multiplexer;
   	
   	// Wait till the browser is ready to render the game (avoids glitches)
  	window.requestAnimationFrame(function () {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				$('#player-msg').html('<span style="float:left">Searching for competitor </span>\n<span class="ellipsis">.</span>\n<span class="ellipsis">.</span>\n<span class="ellipsis">.</span>');
 				$('#game-stats').fadeIn();
 				userNumInterval = setInterval(function () {
-					$.get('http://localhost:3000/game/players', function (data) {
+					$.get('http://2048.stolarsky.com:3000/game/players', function (data) {
 						data = JSON.parse(data);
 						$('#num-players').html('Number of current players: ' + data.numPlayers);
 						$('#num-games').html('Number of current games: ' + data.numGames);
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								}, 3000);
 							};
 
-				   			var gameTimeLeft = 20;//game timer
+				   			var gameTimeLeft = 120;//game timer
 				   			var timer = setInterval(function () {
 								var sec; 
 	    						if (gameTimeLeft % 60 === 0)
