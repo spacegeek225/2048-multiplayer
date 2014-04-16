@@ -1,4 +1,16 @@
 @import url(fonts/clear-sans.css);
+
+
+.vex-dialog-button-2048-friend {
+  background: #8f7a66;
+  color: #f9f6f2;
+}
+
+.vex-dialog-button-2048-simple {
+  background: #8f7a66;
+  color: #f9f6f2;
+}
+
 html, body {
   margin: 0;
   padding: 0;
